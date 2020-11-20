@@ -1,0 +1,33 @@
+/*  Using universal selector to avoid white space top edge and left edge  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*  I don't see any difference if I don't hide the overflow  */
+
+body {
+  height: 100vh;
+  background: url(./Bioluminescent\ Swells\ -\ Bommarito\ Art.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* I don't know why we need the transform - translate when we are setting top and left to 50% */
+.clock {
+  width: 800px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0 0 6px #000;
+  color: #fff;
+  letter-spacing: 20px;
+  user-select: none;
+  font-size: 9rem;
+}
