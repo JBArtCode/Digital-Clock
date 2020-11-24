@@ -8,6 +8,11 @@
 
 /*  I don't see any difference if I don't hide the overflow  */
 
+/* 
+  In this scenario you won't see a difference. You will only see a difference if
+  the content inside of the body exceeds the width or height of the window. In this
+  case the content is only a couple of numbers, therefore there is no overflow to hide.
+*/
 body {
   height: 100vh;
   background: url(./Bioluminescent\ Swells\ -\ Bommarito\ Art.jpg);
@@ -17,6 +22,13 @@ body {
 }
 
 /* I don't know why we need the transform - translate when we are setting top and left to 50% */
+
+/*
+  The reason that you need transform - translate is because left: 50% will bring the left edge
+  of the clock to the center of the screen. You don't want that. Instead, what you want is to
+  bring the CENTER of the clock (not the left edge) to the center of the screen. The transform
+  translate is what does that part for you.
+*/
 .clock {
   width: 800px;
   height: 100px;
